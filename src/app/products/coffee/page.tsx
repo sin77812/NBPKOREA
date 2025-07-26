@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Tab } from '@headlessui/react';
 import { product } from './data';
 
-function classNames(...classes: any[]) {
+function classNames(...classes: (string | boolean | undefined)[]) {
   return classes.filter(Boolean).join(' ');
 }
 
@@ -118,7 +118,7 @@ export default function CoffeeAfterburnerPage() {
                                 </ul>
                             </div>
                              <div className="grid grid-cols-1 gap-6">
-                                {product.techFeatures.map((feature: any, i: number) => (
+                                {product.techFeatures.map((feature: { title: string; description: string }, i: number) => (
                                     <div key={i} className="bg-gray-50 p-6 rounded-lg">
                                         <h4 className="font-bold text-lg text-gray-800 mb-2">{feature.title}</h4>
                                         <p className="text-gray-600">{feature.description}</p>
@@ -145,7 +145,7 @@ export default function CoffeeAfterburnerPage() {
                                         </tr>
                                     </thead>
                                     <tbody className="bg-white divide-y divide-gray-200">
-                                        {product.specifications.map((spec: any, i: number) => (
+                                        {product.specifications.map((spec: { name: string; capacity: string; size: string; burner: string; control: string; controller: string; fuel: string }, i: number) => (
                                             <tr key={i}>
                                                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{spec.name}</td>
                                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{spec.capacity}</td>
@@ -176,7 +176,7 @@ export default function CoffeeAfterburnerPage() {
                             <h3 className="text-2xl font-bold mb-4 text-gray-800">{product.as.title}</h3>
                             <p className="max-w-2xl mx-auto text-gray-600 mb-10">{product.as.description}</p>
                             <div className="flex justify-center items-center space-x-4 md:space-x-8 mb-10">
-                                {product.as.steps.map((step: any, i: number) => (
+                                {product.as.steps.map((step: { name: string }, i: number) => (
                                     <div key={i} className="flex flex-col items-center">
                                         <div className="bg-blue-100 rounded-full p-4 mb-2">
                                             <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>

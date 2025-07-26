@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import Link from 'next/link'; // Add this line
 
 const allProductsData = [
@@ -58,6 +57,8 @@ const ProductDetail = ({ category, productSlug }: ProductDetailProps) => {
     (p) => p.category === category && p.slug === productSlug
   );
 
+  const [mainImage, setMainImage] = useState(product?.images[0] || '');
+
   if (!product) {
     return (
       <div className="pt-20 text-center py-40">
@@ -66,8 +67,6 @@ const ProductDetail = ({ category, productSlug }: ProductDetailProps) => {
       </div>
     );
   }
-
-  const [mainImage, setMainImage] = useState(product.images[0]);
 
   return (
     <section className="pt-20 py-16 md:py-24 bg-white">

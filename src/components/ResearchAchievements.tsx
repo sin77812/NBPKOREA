@@ -134,7 +134,7 @@ const ResearchAchievements: React.FC = () => {
           </h3>
           <ul className="list-disc list-inside text-text-primary space-y-2 font-body mx-auto w-fit">
             <li>
-              <span className="font-semibold">"고효율 폐열 회수 기술의 산업 적용 사례 연구"</span> -
+              <span className="font-semibold">&ldquo;고효율 폐열 회수 기술의 산업 적용 사례 연구&rdquo;</span> -
               한국환경공학회 추계 학술대회 발표 (2023)
             </li>
             <li>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -14,7 +14,6 @@ interface MegaMenuProps {
 
 const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose, headerHeight = 72 }) => {
   const [activeCategory, setActiveCategory] = useState('environment');
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   const handleProductClick = (productTitle: string, category: string) => {
     // 카테고리별 제품 페이지로 이동
@@ -213,7 +212,7 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose, headerHeight = 72 
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4">
-                    {currentCategory.items.map((item, index) => (
+                    {currentCategory.items.map((item) => (
                       <motion.div
                         key={item.href}
                         variants={itemVariants}

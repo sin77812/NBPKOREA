@@ -45,15 +45,9 @@ const partners = [
     { name: 'ECOSTAR Turkey', description: '저 NOx 가스버너 기본설계 및 기술검토, 연소설비 및 가스버너 수입, 설치, 판매 협약' },
 ];
 
-const clientLogos = {
-    shipbuilding: ['/images/clients/shipbuilding/logo1.png', '/images/clients/shipbuilding/logo2.png'],
-    automotive: ['/images/clients/automotive/logo1.png'],
-    // ... add all other client logos here
-};
 
 const AboutPage = () => {
   const [showAllPatents, setShowAllPatents] = useState(false);
-  const displayedPatents = showAllPatents ? patents : patents.slice(0, 6);
   return (
     <div className="bg-background text-text-primary">
         {/* 1.1. Vision and Core Values */}
@@ -138,7 +132,7 @@ const AboutPage = () => {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-                            {displayedPatents.map((patent, index) => (
+                            {(showAllPatents ? patents : patents.slice(0, 6)).map((patent, index) => (
                                 <motion.div 
                                     key={index} 
                                     className="p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 group"

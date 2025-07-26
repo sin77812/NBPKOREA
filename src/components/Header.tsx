@@ -8,7 +8,6 @@ import MegaMenu from './MegaMenu';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -19,11 +18,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      // Scroll handling logic can be added here if needed
     };
 
     const updateHeaderHeight = () => {
@@ -100,7 +95,6 @@ const Header = () => {
     },
   ];
 
-  const isHomePage = pathname === '/';
 
   return (
     <>

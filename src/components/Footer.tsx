@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -24,11 +25,11 @@ const Footer = () => {
           <div className="sm:col-span-2 md:col-span-1">
             <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">바로가기</h3>
             <ul className="space-y-1 sm:space-y-2">
-              <li><a href="/about" className="text-xs sm:text-sm hover:text-[#C0392B] transition-colors duration-300 block py-2">회사소개</a></li>
-              <li><a href="/products" className="text-xs sm:text-sm hover:text-[#C0392B] transition-colors duration-300 block py-2">제품/솔루션</a></li>
-              <li><a href="/rnd" className="text-xs sm:text-sm hover:text-[#C0392B] transition-colors duration-300 block py-2">기술 연구소</a></li>
-              <li><a href="/support" className="text-xs sm:text-sm hover:text-[#C0392B] transition-colors duration-300 block py-2">고객 지원</a></li>
-              <li><a href="/careers" className="text-xs sm:text-sm hover:text-[#C0392B] transition-colors duration-300 block py-2">채용</a></li>
+              <li><Link href="/about" className="text-xs sm:text-sm hover:text-[#C0392B] transition-colors duration-300 block py-2">회사소개</Link></li>
+              <li><Link href="/products" className="text-xs sm:text-sm hover:text-[#C0392B] transition-colors duration-300 block py-2">제품/솔루션</Link></li>
+              <li><Link href="/rnd" className="text-xs sm:text-sm hover:text-[#C0392B] transition-colors duration-300 block py-2">기술 연구소</Link></li>
+              <li><Link href="/support" className="text-xs sm:text-sm hover:text-[#C0392B] transition-colors duration-300 block py-2">고객 지원</Link></li>
+              <li><Link href="/careers" className="text-xs sm:text-sm hover:text-[#C0392B] transition-colors duration-300 block py-2">채용</Link></li>
             </ul>
           </div>
         </div>
