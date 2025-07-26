@@ -156,7 +156,7 @@ const Header = () => {
         </nav>
         <div className="hidden lg:flex items-center space-x-4">
           <Link
-            href="/contact"
+            href="/support"
             className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-2.5 rounded-full hover:from-red-600 hover:to-orange-600 transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             견적문의
@@ -191,7 +191,7 @@ const Header = () => {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="/support"
               className="block w-full text-center bg-gradient-to-r from-red-500 to-orange-500 text-white py-3 rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 font-medium mt-4"
               onClick={() => setIsMobileMenuOpen(false)}
             >
