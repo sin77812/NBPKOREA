@@ -172,17 +172,17 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose, headerHeight = 72 
                   </h3>
                   
                   {Object.entries(categories).map(([key, category]) => (
-                    <motion.button
-                      key={key}
-                      whileHover={{ scale: 1.02, x: 4 }}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={() => setActiveCategory(key)}
-                      className={`w-full text-left p-4 rounded-xl transition-all duration-300 group ${
-                        activeCategory === key
-                          ? 'bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-red-500 shadow-md'
-                          : 'hover:bg-gray-50 border-l-4 border-transparent'
-                      }`}
-                    >
+                    <Link key={key} href={`/products/${key}`}>
+                      <motion.div
+                        whileHover={{ scale: 1.02, x: 4 }}
+                        whileTap={{ scale: 0.98 }}
+                        onMouseEnter={() => setActiveCategory(key)}
+                        className={`w-full text-left p-4 rounded-xl transition-all duration-300 group cursor-pointer ${
+                          activeCategory === key
+                            ? 'bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-red-500 shadow-md'
+                            : 'hover:bg-gray-50 border-l-4 border-transparent'
+                        }`}
+                      >
                       <div className="flex items-center justify-between">
                         <div>
                           <h4 className={`font-semibold transition-colors ${
@@ -198,7 +198,8 @@ const MegaMenu: React.FC<MegaMenuProps> = ({ isOpen, onClose, headerHeight = 72 
                           activeCategory === key ? 'text-red-500 rotate-90' : 'text-gray-400 group-hover:text-red-500'
                         }`} />
                       </div>
-                    </motion.button>
+                      </motion.div>
+                    </Link>
                   ))}
                 </div>
 

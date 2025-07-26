@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Poppins, Noto_Sans_KR } from 'next/font/google';
 import Header from '@/components/Header'; // Header 컴포넌트 import
+import Footer from '@/components/Footer'; // Footer 컴포넌트 import
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const poppins = Poppins({
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} ${poppins.variable} ${notoSansKR.variable} font-heading font-body bg-background text-text-primary`}>
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

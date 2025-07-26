@@ -5,10 +5,6 @@ import Hero from '@/components/Hero';
 import CoreValues from '@/components/CoreValues';
 import Products from '@/components/Products';
 import News from '@/components/News';
-import Footer from '@/components/Footer';
-
-
-
 
 const HomeClient: React.FC = () => {
   return (
@@ -17,7 +13,6 @@ const HomeClient: React.FC = () => {
       <CoreValues />
       <Products />
       <News />
-      <Footer />
     </main>
   );
 };

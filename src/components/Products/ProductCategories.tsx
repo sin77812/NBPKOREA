@@ -43,7 +43,7 @@ const ProductCategories = () => {
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {categories.map((category, index) => (
             <motion.div
               id={category.id}
@@ -57,17 +57,17 @@ const ProductCategories = () => {
                 alt={category.name}
                 width={600}
                 height={400}
-                className="w-full h-40 object-cover"
+                className="w-full h-24 sm:h-32 lg:h-40 object-cover"
               />
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold text-gray-800 mb-2 font-poppins">
+              <div className="p-3 sm:p-4 lg:p-6 flex flex-col flex-grow">
+                <h3 className="text-sm sm:text-lg lg:text-2xl font-bold text-gray-800 mb-1 sm:mb-2 font-poppins">
                   {category.name}
                 </h3>
-                <p className="text-gray-600 mb-4 font-inter flex-grow">
+                <p className="text-gray-600 mb-2 sm:mb-4 font-inter flex-grow text-xs sm:text-sm hidden sm:block">
                   {category.description}
                 </p>
-                <div className="mb-4">
-                  <ul className="list-disc list-inside text-gray-600 space-y-1">
+                <div className="mb-2 sm:mb-4 hidden lg:block">
+                  <ul className="list-disc list-inside text-gray-600 space-y-1 text-xs">
                     {category.details.map((detail, i) => (
                       <li key={i}>{detail}</li>
                     ))}
@@ -75,9 +75,10 @@ const ProductCategories = () => {
                 </div>
                 <Link
                   href={category.link}
-                  className="mt-auto inline-block bg-accent text-white text-center px-6 py-3 rounded-full hover:bg-orange-600 transition-colors font-semibold"
+                  className="mt-auto inline-block bg-accent text-white text-center px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full hover:bg-orange-600 transition-colors font-semibold text-xs sm:text-sm"
                 >
-                  자세히 보기
+                  <span className="hidden sm:inline">자세히 보기</span>
+                  <span className="sm:hidden">보기</span>
                 </Link>
               </div>
             </motion.div>
