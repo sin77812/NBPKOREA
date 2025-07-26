@@ -212,26 +212,26 @@ const SupportPage: React.FC = () => {
             <h3 className="text-3xl font-semibold text-center mb-8 font-heading text-text-primary">
               A/S 절차 안내
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-center">
               <div className="flex flex-col items-center">
-                <div className="text-accent text-5xl mb-4">1️⃣</div>
-                <h4 className="text-xl font-bold mb-2 font-heading text-text-primary">문의 접수</h4>
-                <p className="text-text-primary font-body">전화, 이메일, 온라인 문의 등 편리한 채널로 접수</p>
+                <div className="text-accent text-2xl sm:text-3xl lg:text-4xl mb-3">1️⃣</div>
+                <h4 className="text-lg lg:text-xl font-bold mb-2 font-heading text-text-primary">문의 접수</h4>
+                <p className="text-sm lg:text-base text-text-primary font-body">전화, 이메일, 온라인 문의 등 편리한 채널로 접수</p>
               </div>
               <div className="flex flex-col items-center">
-                <div className="text-accent text-5xl mb-4">2️⃣</div>
-                <h4 className="text-xl font-bold mb-2 font-heading text-text-primary">상담 및 진단</h4>
-                <p className="text-text-primary font-body">전문 상담원이 문제 진단 및 해결 방안 안내</p>
+                <div className="text-accent text-2xl sm:text-3xl lg:text-4xl mb-3">2️⃣</div>
+                <h4 className="text-lg lg:text-xl font-bold mb-2 font-heading text-text-primary">상담 및 진단</h4>
+                <p className="text-sm lg:text-base text-text-primary font-body">전문 상담원이 문제 진단 및 해결 방안 안내</p>
               </div>
               <div className="flex flex-col items-center">
-                <div className="text-accent text-5xl mb-4">3️⃣</div>
-                <h4 className="text-xl font-bold mb-2 font-heading text-text-primary">현장 방문/수리</h4>
-                <p className="text-text-primary font-body">필요시 전문 엔지니어의 현장 방문 및 수리 진행</p>
+                <div className="text-accent text-2xl sm:text-3xl lg:text-4xl mb-3">3️⃣</div>
+                <h4 className="text-lg lg:text-xl font-bold mb-2 font-heading text-text-primary">현장 방문/수리</h4>
+                <p className="text-sm lg:text-base text-text-primary font-body">필요시 전문 엔지니어의 현장 방문 및 수리 진행</p>
               </div>
               <div className="flex flex-col items-center">
-                <div className="text-accent text-5xl mb-4">4️⃣</div>
-                <h4 className="text-xl font-bold mb-2 font-heading text-text-primary">사후 관리</h4>
-                <p className="text-text-primary font-body">수리 완료 후에도 지속적인 관리 및 지원</p>
+                <div className="text-accent text-2xl sm:text-3xl lg:text-4xl mb-3">4️⃣</div>
+                <h4 className="text-lg lg:text-xl font-bold mb-2 font-heading text-text-primary">사후 관리</h4>
+                <p className="text-sm lg:text-base text-text-primary font-body">수리 완료 후에도 지속적인 관리 및 지원</p>
               </div>
             </div>
           </div>
@@ -263,19 +263,30 @@ const SupportPage: React.FC = () => {
           </div>
 
           {/* A/S 및 기술 지원 전용 연락처 */}
-          <div className="text-center">
-            <h3 className="text-3xl font-semibold mb-6 font-heading text-text-primary">
-              A/S 및 기술 지원 전용 연락처
-            </h3>
-            <p className="text-2xl font-bold text-accent mb-2 font-heading">
-              전화: 02-1234-5678
-            </p>
-            <p className="text-xl font-body">
-              이메일: as_support@nbpkorea.com
-            </p>
-            <p className="text-sm text-gray-600 mt-2 font-body">
-              (운영 시간: 평일 09:00~18:00)
-            </p>
+          <div className="bg-[#2C3E50] text-white py-8 sm:py-12 px-6 sm:px-8 rounded-lg">
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-6 font-heading">
+                A/S 및 기술 지원 전용 연락처
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">A/S 센터</h4>
+                  <p className="text-sm sm:text-base mb-1">전화: 02-1234-5678</p>
+                  <p className="text-sm sm:text-base mb-1">이메일: nbpkorea@nbpkorea.com</p>
+                  <p className="text-xs sm:text-sm text-gray-300 mt-2">
+                    운영 시간: 평일 09:00~18:00
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">기술 지원팀</h4>
+                  <p className="text-sm sm:text-base mb-1">전화: 031.434.6566~7</p>
+                  <p className="text-sm sm:text-base mb-1">이메일: nbpkorea@nbpkorea.co.kr</p>
+                  <p className="text-xs sm:text-sm text-gray-300 mt-2">
+                    24시간 긴급 지원 가능
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
